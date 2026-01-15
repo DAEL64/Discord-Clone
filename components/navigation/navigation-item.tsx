@@ -16,9 +16,13 @@ export const NavigationItem = ({ id, imageUrl, name }: NavigationItemProps) => {
   const params = useParams();
   const router = useRouter();
 
+  const onClick = () => {
+    router.push(`/servers/${id}`)
+  }
+
   return (
     <ActionTooltip label={name}>
-      <button className="group cursor-pointer relative flex justify-center w-full items-center" onClick={() => {}}>
+      <button className="group cursor-pointer relative flex justify-center w-full items-center" onClick={onClick}>
         <div
           className={cn(
             "absolute left-0 bg-primary rounded-r-full transition-all w-1",

@@ -8,7 +8,10 @@ import { NavigationItem } from "./navigation-item";
 
 import { Separator } from "../ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Scroll } from "lucide-react";
+
+import { ModeToggle } from "../mode-toggle";
+
+import { UserButton } from "@clerk/nextjs";
 
 export const NavigationSidebar = async () => {
   const profile = await currentProfile();
@@ -34,10 +37,28 @@ export const NavigationSidebar = async () => {
       <ScrollArea className="flex-1 w-full">
         {server.map((server) => (
           <div key={server.id} className="mb-4">
-            <NavigationItem id={server.id} imageUrl={server.imageUrl} name={server.name} />
+            <NavigationItem
+              id={server.id}
+              imageUrl={server.imageUrl}
+              name={server.name}
+            />
           </div>
         ))}
       </ScrollArea>
+      <div className="pb-3 mt-auto flex items-center flex-col gap-y-3">
+        <ModeToggle />
+        <UserButton
+        appearance={{
+          elements: {
+            avatarBox: {
+              width: "48px",
+              height: "48px"
+            },
+          }
+        }}
+          afterSignOutUrl="/"
+        />
+      </div>
     </div>
   );
 };
