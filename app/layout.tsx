@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+
 import "./globals.css";
+
 import { ClerkProvider } from "@clerk/nextjs";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+
 import { cn } from "@/lib/utils";
+
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -32,6 +37,7 @@ export default function RootLayout({
             enableSystem
             storageKey="discord-clone-theme"
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>

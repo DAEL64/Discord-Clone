@@ -48,14 +48,14 @@ export const NavigationSidebar = async () => {
       <div className="pb-3 mt-auto flex items-center flex-col gap-y-3">
         <ModeToggle />
         <UserButton
-        appearance={{
-          elements: {
-            avatarBox: {
-              width: "48px",
-              height: "48px"
+          appearance={{
+            elements: {
+              avatarBox: {
+                width: "44px",
+                height: "44px",
+              },
             },
-          }
-        }}
+          }}
           afterSignOutUrl="/"
         />
       </div>

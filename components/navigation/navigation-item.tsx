@@ -31,8 +31,8 @@ export const NavigationItem = ({ id, imageUrl, name }: NavigationItemProps) => {
           )}
         />
         <div className={cn(
-            "relative group flex h-12 w-12 transition-all overflow-hidden",
-            params?.serverId === id && "bg-primary/10 text-primary rounded-xl"
+            "relative group flex rounded-xl h-12 w-12 transition-all overflow-hidden",
+            params?.serverId === id && "bg-primary/10 text-primary"
         )}>
             <Image fill src={imageUrl} alt="channel" />
         </div>
