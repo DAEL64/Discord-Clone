@@ -29,7 +29,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body
-          className={cn`${openSans.variable}, bg-white dark:bg-[#2C2E33] antialiased`}
+          className={cn`${openSans.variable}, bg-[#fbfbfb] dark:bg-[#1a1a1e] antialiased`}
         >
           <ThemeProvider
             attribute="class"
