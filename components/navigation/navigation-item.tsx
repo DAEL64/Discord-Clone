@@ -34,7 +34,7 @@ export const NavigationItem = ({ id, imageUrl, name }: NavigationItemProps) => {
             "relative group flex rounded-xl h-12 w-12 transition-all overflow-hidden",
             params?.serverId === id && "bg-primary/10 text-primary"
         )}>
-            <Image fill src={imageUrl} alt="channel" />
+            <Image fill sizes="48px" loading="eager" src={imageUrl} alt="channel" />
         </div>
       </button>
     </ActionTooltip>
