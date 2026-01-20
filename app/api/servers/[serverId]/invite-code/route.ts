@@ -10,7 +10,7 @@ export async function PATCH(
 ) {
   try {
     const profile = await currentProfile();
- 
+
     const { serverId } = await params;
 
     if (!profile) {
